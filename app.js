@@ -107,7 +107,7 @@ const endGame = (msg) => {
   }, 300);
 }
 
-// adds an underline under the curretn player
+// adds an underline under the current player
 const playerTurn = () => {
   // player text elements
   const player1 = document.getElementById('player1');
@@ -159,7 +159,7 @@ const handleClick = (evt) => {
   playerTurn();
 }
 
-/** checkForWin: check board cell-by-cell for "does a win start here?" */
+/** checkForWin: check board cell-by-cell for "does a win start here?" **/
 
 const checkForWin = () => {
   const _win = (cells) => {
