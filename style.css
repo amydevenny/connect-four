@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: rgb(130, 153, 201);
+}
+
+#container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 6rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin: 5% 0 5%;
+}
+
+#players {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-around;
+}
+
+#players span {
+  font-size: 2em;
+  font-family: 'VT323', monospace;
+}
+
+.underline {
+  border-bottom: 5px solid rgb(39, 231, 32);
+}
+
+/* game board table */
+table {
+  position: relative;
+  margin: 5% auto;
+  border-spacing: 0;
+  min-width: 600px;
+  border-right: rgb(63, 63, 255) 20px solid;
+  border-left: rgb(63, 63, 255) 20px solid;
+  padding-bottom: 5em;
+}
+
+#board td {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(transparent 2.1em, rgb(211, 191, 11) 1em);
+}
+
+
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece {
+  position: relative;
+  margin: 5px 5px 5px 6px;
+  width: 85%;
+  height: 85%;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.piece.p1 {
+  background: radial-gradient(rgb(204, 14, 14) 1.6em, rgb(170, 13, 13) 0.5em);
+}
+
+.piece.p2 {
+  background: radial-gradient(rgb(41, 41, 41) 1.6em, rgb(0, 0, 0) 0.5em);
+}
+
+
+/* found this animation on stackover flow */
+.fall {
+  animation-name: fall-animation;
+  animation-duration: 500ms;
+  /***SUPER IMPORTANT WHEN WORKING WITH Z-INDEX***/
+  animation-fill-mode: forwards;
+}
+
+@keyframes fall-animation {
+  from {
+      transform: translateY(-450px);
+  }
+  to {
+      transform: translateY(0);
+  }
+}
+
+/* column-top is table row of clickable areas for each column */
+
+#column-top td {
+  border-right: dashed 1px rgb(211, 211, 211);
+  border-left: dashed 1px rgb(211, 211, 211);
+  background: rgba(199, 199, 199, 0.1);
+}
+
+#column-top td:hover {
+  cursor: pointer;
+  background-color: rgba(230, 230, 230, 0.8);
+}
+
+
+
+
+
