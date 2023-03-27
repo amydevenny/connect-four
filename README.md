@@ -1,2 +1,2 @@
 # Connect Four
-JavaScript Connect Four Game 
+JavaScript Connect Four game designed in a retro style
